@@ -26,16 +26,3 @@ def visualize(segmentation_map):
          raise ValueError('Expect 2-D input label')
     
     return CLASS_COLOR[segmentation_map]
-
-def image2bytes(img):
-    imgByteArr = io.BytesIO()
-    img.save(imgByteArr, format='png')
-    imgByteArr = imgByteArr.getvalue()
-    encoded = base64.b64encode(imgByteArr)
-    decoded = encoded.decode('ascii')
-    return decoded
-
-def bytes2image(bytes):
-    decoded_bytes = base64.b64decode(bytes),
-    img = np.array(io.BytesIO(decoded_bytes), dtype=np.uint8)
-    return img

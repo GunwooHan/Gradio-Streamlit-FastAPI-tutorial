@@ -19,5 +19,10 @@ def segmentation(img):
     else:
         return None
 
-demo = gr.Interface(segmentation, gr.Image(), "image")
-demo.launch()
+def main():    
+    demo = gr.Interface(segmentation, gr.Image(), "image")
+    demo.launch()
+
+
+if __name__ == '__main__':
+    main()
