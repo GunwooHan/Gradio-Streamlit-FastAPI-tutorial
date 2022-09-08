@@ -2,3 +2,4 @@
 gradio
 fastapi
 uvicorn
+opencv-python
